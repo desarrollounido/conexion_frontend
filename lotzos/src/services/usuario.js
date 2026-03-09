@@ -1,8 +1,10 @@
 import api from './api';
 
+
+
 export const getUsuario = async () => {
     try {
-        const response = await api.get('usuario');
+        const response = await api.get('usuarios');
         return response;
     } catch (error) {
         console.error('Error fetching usuario:', error);
@@ -12,7 +14,7 @@ export const getUsuario = async () => {
 
 export const getUsuarioById = async (id) => {
     try {
-        const response = await api.get(`usuario/${id}`);
+        const response = await api.get(`usuarios/${id}`);
         return response;
     } catch (error) {
         console.error('Error fetching usuario:', error);
@@ -23,7 +25,7 @@ export const getUsuarioById = async (id) => {
 
 export const createUsuario = async (data) => {
     try {
-        const response = await api.post('usuario', data);
+        const response = await api.post('usuarios', data);
         return response;
     } catch (error) {
         console.error('Error creating usuario:', error);
@@ -33,7 +35,7 @@ export const createUsuario = async (data) => {
 
 export const updateUsuario = async (id, data) => {
     try {
-        const response = await api.put(`usuario/${id}`, data);
+        const response = await api.put(`usuarios/${id}`, data);
         return response;
     } catch (error) {
         console.error('Error updating usuario:', error);
@@ -43,7 +45,7 @@ export const updateUsuario = async (id, data) => {
 
 export const deleteUsuario = async (id) => {
     try {
-        const response = await api.delete(`usuario/${id}`);
+        const response = await api.delete(`usuarios/${id}`);
         return response;
     } catch (error) {
         console.error('Error deleting usuario:', error);
